@@ -6,7 +6,8 @@
 //  Copyright 2011 Drobnik.com. All rights reserved.
 //
 
-#import "DTCoreText.h"
+#import "DTWebVideoView.h"
+#import "DTIframeTextAttachment.h"
 
 @interface DTWebVideoView ()
 
@@ -94,10 +95,12 @@
 		shouldOpenExternalURL = [_delegate videoView:self shouldOpenExternalURL:[request URL]];
 	}
 	
+#if !defined(DT_APP_EXTENSIONS)
 	if (shouldOpenExternalURL)
 	{
 		[[UIApplication sharedApplication] openURL:[request URL]];
 	}
+#endif
 	
 	return NO;
 }

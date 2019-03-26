@@ -6,7 +6,11 @@
 NSString * const NSBaseURLDocumentOption = @"NSBaseURLDocumentOption";
 NSString * const NSTextEncodingNameDocumentOption = @"NSTextEncodingNameDocumentOption";
 NSString * const NSTextSizeMultiplierDocumentOption = @"NSTextSizeMultiplierDocumentOption";
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_7_0
 NSString * const NSAttachmentAttributeName = @"NSAttachmentAttributeName";
+#endif
+
 #endif
 
 // custom options
@@ -50,6 +54,7 @@ NSString * const DTAscentMultiplierAttribute = @"DTAscentMultiplierAttribute";
 NSString * const DTBackgroundStrokeColorAttribute = @"DTBackgroundStrokeColor";
 NSString * const DTBackgroundStrokeWidthAttribute = @"DTBackgroundStrokeWidth";
 NSString * const DTBackgroundCornerRadiusAttribute = @"DTBackgroundCornerRadius";
+NSString * const DTArchivingAttribute = @"DTArchivingAttribute";
 
 // field constants
 NSString * const DTListPrefixField = @"{listprefix}";

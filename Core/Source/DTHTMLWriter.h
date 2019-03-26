@@ -43,7 +43,7 @@
  */
 
 /**
- If specified then all absolute font sizes (px) will be divided by this value. This is useful if you specified a text size multiplicator when converting HTML to the attributed string you are processing.
+ If specified then all absolute font sizes (px) will be divided by this value. This is useful if you specified a text size multiplier when converting HTML to the attributed string you are processing.
  */
 @property (nonatomic, assign) CGFloat textScale;
 
@@ -56,5 +56,11 @@
  The attributed string that the writer is processing.
  */
 @property (nonatomic, readonly) NSAttributedString *attributedString;
+
+
+/**
+ The HTML element tag name to use for paragraphs. Defaults to @"p".
+ */
+@property (nonatomic, strong) NSString *paragraphTagName;
 
 @end
